@@ -30,11 +30,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: coffee
+      app: tea
   template:
     metadata:
       labels:
-        app: coffee
+        app: tea
     spec:
       containers:
         - name: tea
@@ -53,11 +53,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: coffee
+      app: juice
   template:
     metadata:
       labels:
-        app: coffee
+        app: juice
     spec:
       containers:
         - name: juice
@@ -76,11 +76,11 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: coffee
+      app: water
   template:
     metadata:
       labels:
-        app: coffee
+        app: water
     spec:
       containers:
         - name: water
