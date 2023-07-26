@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: http-request
+  namespace: default
+  labels:
+    app: http-request
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: http-request
+  template:
+    metadata:
+      labels:
+        app: http-request
+    spec:
+      containers:
+        - name: http-request
+          image: scdean/http-request:0.1

@@ -1,0 +1,14 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: http-request
+  namespace: default
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`study.http.com`)
+      kind: Rule
+      services:
+        - name: http-request
+          port: 8080
