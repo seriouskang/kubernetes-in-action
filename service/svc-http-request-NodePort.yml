@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: http-request
 spec:
+  type: NodePort
   selector:
     app: http-request
   ports:
@@ -10,3 +11,4 @@ spec:
       port: 8080
       protocol: TCP
       targetPort: 8080
+      nodePort: 30080
